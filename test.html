@@ -1,0 +1,35 @@
+<style>
+.main-font {
+  font-family:Courier;
+}
+
+.bigger {
+  font-weight:bold;
+  font-size: 28px;
+}
+
+.smaller {
+  font-size: 14px;
+}
+</style>
+
+<div class="main-font bigger">Amanda.</div>
+<div class="main-font">This is some text.</div>
+
+<div>More smaller text.</div>
+<div>More smaller text 2.</div>
+<div>More smaller text 3.</div>
+<div class="main-font smaller">More smaller text 4.</div>
+<div><a href="http://google.com">go to google</a></div>
+
+<div><textarea id="outputBox" type="text" style="width:200px; height:200px"></textarea ></div>
+<div><input id="inputBox" type="text" style="width:200px; height:50px"></input></div>
+
+<div><input type="button" onclick="ClickedTheButton(event)" style="width:200px" value="Click Me"></input></div>
+
+<script>
+function ClickedTheButton(event) {
+	document.getElementById("outputBox").value += '\n' + document.getElementById("inputBox").value
+	document.getElementById("inputBox").value = ''
+}
+</script>
